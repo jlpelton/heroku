@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splurty</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <div class="col-xs-3">
+      <div class="circle">
+        <br />
+        Children's
+        <br />
+        Books
+        <br />
+        Rule!
+      </div>
+    </div>
+    <div class="col-xs-4 slogan">
+      Splurting out unsolicited advice about entrepreneurship since 2014
+    </div>
+    <div class="col-xs-5 links">
+      <%= link_to 'Contribute', new_quote_path %>
+      <%= link_to 'About', '#' %>
+    </div>
+  </header>
+  <hr />
+  <br class="clear" />
+  <div class="container">
+<%= yield %>
+</div>
+
+  <div class="footer">
+    <div class="container">
+     <div class="col-xs-6">
+        <%= link_to "This isn't enough, I need more", "#", :class => 'next-quote' %>
+
+      </div>
+      
+      <div class="col-xs-6 footer-blurb">
+        Proudly hacked in Boston, MA by <a href="http://thefirehoseproject.com">me, Jenny P!</a><br />
+        Want to read more awesome books? Check out HMH <a href=" http://www.hmhco.com/">here</a>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
